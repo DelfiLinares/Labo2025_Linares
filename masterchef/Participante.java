@@ -1,8 +1,8 @@
-package masterchef;
+package MasterChef;
 
 import java.time.LocalDate;
 
-public class Participante extends Persona {
+public abstract class Participante extends Persona {
     private String localidad;
     private Colores color;
 
@@ -27,5 +27,7 @@ public class Participante extends Persona {
         this.localidad=localidad;
         this.color=color;
     }
+
+    public abstract void mensaje();
 
 }
