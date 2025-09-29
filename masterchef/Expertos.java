@@ -1,18 +1,20 @@
-package masterchef;
+package MasterChef;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Expertos extends Participante {
 	private static LocalTime tiempoDePreparacion = LocalTime.of(1, 20);
-	private LocalTime tiempoActual = LocalTime.of(1, 20);
+	private LocalTime tiempoActual ;
 	
 	public Expertos(String localidad, Colores color, String nombre, String apellido, int dni,
 			LocalDate nacimiento) {
 		super(localidad, color, nombre, apellido, dni, nacimiento);
+        tiempoActual = Expertos.tiempoDePreparacion;
 	}
 
-	public static LocalTime getTiempoDePreparacion() {
+
+    public static LocalTime getTiempoDePreparacion() {
 		return tiempoDePreparacion;
 	}
 
@@ -28,9 +30,9 @@ public class Expertos extends Participante {
 		this.tiempoActual = tiempoActual;
 	}
 
-	public void mensajeExperto(Expertos e1) {
-		System.out.println(
-				"Perdi 5 minutos preparando la mesa por lo que mi tiempo restante es: " + tiempoActual.minusMinutes(5));
+	@Override
+    public void mensaje() {
+		System.out.println("Perdi 5 minutos preparando la mesa por lo que mi tiempo restante es: " + tiempoActual.minusMinutes(5));
 		tiempoActual = tiempoActual.minusMinutes(5);
 	}
 
