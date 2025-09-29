@@ -1,4 +1,4 @@
-package masterchef;
+package MasterChef;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -43,14 +43,14 @@ public class MasterChefApp{
 		//LocalDate nacimiento
         
         Intermedios i1 = new Intermedios(20, "Bsas", Colores.AZUL, "Ricardo", "Fort", 56789789, LocalDate.of(3,5,1990));
-        Expertos e1 = new Expertos();
-        Principiante pr1 = new Principiante(ingredProhibidos);
+        Expertos e1 = new Expertos("Bsas",Colores.VERDE,"Delfi","Linaresss",47234234,LocalDate.of(2008,6,2));
+        //Principiante pr1 = new Principiante(5,"Bsas",Colores.ROJO,"Tobias","Flores",46234987);
 
-          pr1.mensajePrincipante(pr1);
+          //pr1.mensajePrincipante(pr1);
           e1.mensajeExperto(e1);
           i1.mensajeIntermedio(i1);
 
-          pr1.cocinarPlatoPrincipiante(p1, ingredProhibidos);
+          //pr1.cocinarPlatoPrincipiante(p1, ingredProhibidos);
           e1.cocinarPlatoExperto(p3, e1);
           i1.cocinarPlatoIntermedio(p2, i1);
     }
