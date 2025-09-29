@@ -1,4 +1,4 @@
-package masterchef;
+package MasterChef;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -20,12 +20,13 @@ public class Principiante extends Participante {
 		this.ingredProhibidos = ingredProhibidos;
 	}
 
-	public void mensajePrincipante (Principiante pr1){
-        for (Ingrediente aux : pr1.ingredProhibidos)
+    @Override
+    public void mensaje(){
+        for (Ingrediente aux : ingredProhibidos)
             System.out.println("Ya guarde todos los elementos prohibidos y no voy a usar: " + aux.getNombre());
     }
 
-	public void cocinarPlatoPrincipiante(Plato p1, HashSet<Ingrediente> ingredProhibidos) {
+	public void cocinarPlatoPrincipiante(Plato p1) {
         try {
             if (p1.getTipo() == Tipo.PRINCIPAL) {
                 throw new PlatoNoPermitidoException("Los principiantes solamente pueden cocinar entradas.");
