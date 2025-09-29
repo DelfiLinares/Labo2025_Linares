@@ -1,4 +1,4 @@
-package masterchef;
+package MasterChef;
 
 import java.time.LocalDate;
 
@@ -19,8 +19,9 @@ public class Intermedios extends Participante {
 		this.stockIngred = stockIngred;
 	}
 
-	public void mensajeIntermedio(Intermedios i1) {
-		if (i1.stockIngred > 1) {
+    @Override
+    public void mensaje() {
+		if (stockIngred > 1) {
 			System.out.println("Mi stock a utilizar es de " + stockIngred);
 		}
 	}
